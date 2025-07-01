@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Portal – CyberHackLab</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #00f7ff;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .terminal-box {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 40px 60px;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      box-shadow: 0 0 25px #00ffff88;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #00f7ff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #b3ffff;
+    }
+
+    .glow {
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+      }
+      to {
+        text-shadow: 0 0 20px #00f7ff, 0 0 30px #00f7ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal-box">
+    <h1 class="glow">🔐 Admin Access</h1>
+    <p>Administrator: <strong>Engineer Wedad Badr</strong></p>
+    <p>Date: <span id="date"></span></p>
+    <p>Welcome to the CyberHackLab Admin Panel</p>
+  </div>
+
+  <script>
+    const dateEl = document.getElementById('date');
+    const today = new Date();
+    dateEl.textContent = today.toDateString();
+  </script>
+</body>
+</html>
